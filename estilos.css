@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+
+
+
+/*----- BARRA DE NAVEGACION ---*/
+.navbar-global{  
+    display: grid;
+    justify-items: center;    
+    align-items: center; 
+    background-color: black;
+    text-align: center;
+    height: 50px;
+}
+
+.navbar-list{
+    width: 100%;
+}
+.navbar-list li{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+.navbar-list >li a{
+color: white;
+text-decoration: none;
+text-transform: uppercase;
+font-family: roboto;
+font-size: 13px;
+}
+
+
+/*----- CUERPO DEL SITIO ---*/
+.Ejercicio-grids{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+}
+
+.index{
+    display: inline-grid;
+    height: 900px;
+    background-image: url('img2/portada1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Portada{  
+     color: white;
+     font-size: 3.125rem;
+}
+.Portada h1{
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+.Portada h2{
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 3.125rem;
+}
+
+.Informacion-rapida{
+    border-radius: 5px;
+    background-color: rgb(27, 91, 175);
+    height: 200px;
+    width: 50%;
+    display: inline-grid;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    font-family: roboto;
+    font-weight: 200;
+}
+
+.Container-info a{
+color: coral;
+font-family: roboto;
+}
+
+
+footer{
+    display: inline-grid;
+    height: 100px;
+    background-color: black;
+    color: white;
+    justify-items: center;
+    align-items: center; 
+}
+
+
+
+
+ @media (min-width: 320px) and (max-width:490px) {
+
+    .Ejercicio-grids{
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "Informacion-rapida Informacion-rapida"
+        "footer footer";
+        grid-template-columns: 50% auto;
+        grid-template-rows: repeat(5, auto);    
+    }
+
+    .navbar-global{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100px;            
+    }
+
+    .navbar-global li{
+        width: 20%;
+        padding-top: 1.5em;
+        margin-left: 15px;
+    }
+
+    .navbar-list a{
+        font-family: roboto;
+    }
+    
+    header{
+        grid-area: header;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-family: roboto;     
+    }
+    
+    main{
+        grid-area: main;
+    }
+
+    .Portada h1{
+        font-size: 3rem;
+    }
+
+    .Portada h2{
+        font-size: 2rem;
+    }
+
+    .Informacion-rapida{
+        border-radius: 1px;
+        background-color: rgb(27, 91, 175);
+        height: 200px;
+        width: 100%;
+        display: inline-grid;
+        justify-items: center;
+        align-items: center;
+        color: white;
+    }
+
+    footer{
+        grid-area: footer;
+        font-size: 0.5rem;
+    }
+
+}
